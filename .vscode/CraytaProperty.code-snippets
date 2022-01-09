@@ -1,0 +1,83 @@
+{
+	"Property Create - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "new property",
+		"body": [
+	 		"const ${1:Name}: property.${2|Number,String,Text,Boolean,Vector,Vector2D,Rotation,Entity,Color,Event,Asset|} = {",
+			"\tname: '${1:Name}',",
+			"\ttype: property.type.${2},",
+			"\t$0",
+  			"}\n"
+	 	],
+	},
+
+	"Property Number Create - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "new property number",
+		"body": [
+	 		"const ${1:Name}: property.Number = {",
+			"\tname: '${1:Name}',",
+			"\ttype: \"number\",",
+			"\tmin: 0,",
+			"\tmax: 1000000,",
+			"\tdefault: ${2:0},",
+  			"}\n$0"
+	 	],
+	},
+
+	"Property Get Property - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "get property",
+		"body": [
+	 		"let ${1:Name} = this.properties.${1:Name}\n$0"
+	 	],
+	},
+
+	"Properties Get Properties - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "get properties",
+		"body": [
+	 		"let pro = this.properties\n$0"
+	 	],
+	},
+
+	"Property Container Array - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "property container array",
+		"body": [
+	 		"container : property.container.array,$0",
+	 	],
+	},
+
+	"Property default Vector - Crayta":{
+		"scope" : "typescript",
+		"prefix" : ["default vector","default v3"],
+		"body": [
+	 		"default : Vector.New(${1:0},${2:0},${3:0}),$0",
+	 	],
+	},
+
+	"Property default Vector2D - Crayta":{
+		"scope" : "typescript",
+		"prefix" : ["default v2","default vector2d"],
+		"body": [
+	 		"default : Vector2D.New(${1:0},${2:0}),$0",
+	 	],
+	},
+
+	"Property default Rotation - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "default rotation",
+		"body": [
+	 		"default : Rotation.New(${1:0},${2:0},${3:0}),$0",
+	 	],
+	},
+
+	"Property default Color - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "default color",
+		"body": [
+	 		"default : Color.New(${1:0},${2:0},${3:0},${4:0})$0",
+	 	],
+	},
+}

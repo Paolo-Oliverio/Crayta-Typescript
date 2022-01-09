@@ -1,0 +1,253 @@
+{
+	"Crayta OnTick Event":{
+		"scope" : "typescript",
+		"prefix" : "on tick",
+		"body": [
+			"/**",
+   			"* Called each frame.",
+   			"*/",
+	 		"export function${1| , Local, Client|}OnTick(this: Script, dt: number): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Crayta OnInteract Event":{
+		"scope" : "typescript",
+		"prefix" : "on interact",
+		"body": [
+			"/**",
+			"* ### Server Only",
+   			"* Called when a player interacts with an entity on all scripts of the entity.",
+   			"*/",
+	 		"export function OnInteract(this: Script, char:Character, hit: HitResult): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Crayta OnCollision Event":{
+		"scope" : "typescript",
+		"prefix" : "on collision",
+		"body": [
+			"/**",
+			"* ### Server Only",
+   			"* Called when a player collides with an entity on all scripts of the entity.",
+			"* Also calls this function on the player's scripts with the entity as the argument.",
+   			"*/",
+	 		"export function OnCollision(this: Script, other:Entity): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Crayta OnUserLogin Event":{
+		"scope" : "typescript",
+		"prefix" : "on login",
+		"body": [
+			"/**",
+			"* ### Server Only",
+   			"* Called when a new user joins the game.",
+   			"*/",
+	 		"export function OnLogin(this: Script, user:User): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Crayta OnUserLogout Event":{
+		"scope" : "typescript",
+		"prefix" : "on logout",
+		"body": [
+			"/**",
+			"* ### Server Only",
+   			"* Called when a new user leaves the game.",
+   			"*/",
+	 		"export function OnLogout(this: Script, user:User): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Crayta OnDeathPlaneTrigger Event":{
+		"scope" : "typescript",
+		"prefix" : "on deathplane trigger",
+		"body": [
+			"/**",
+			"* ### Server Only",
+   			"* Called by the game on a Player when",
+			"* the Player is below the death plane setting",
+   			"*/",
+	 		"export function OnDeathPlaneTrigger(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Crayta OnTriggerEnter Event":{
+		"scope" : "typescript",
+		"prefix" : "on trigger enter",
+		"body": [
+			"/**",
+			"* ### Server Only",
+   			"* Called by a trigger component when",
+			"* an entity enters the trigger volume",
+   			"*/",
+	 		"export function OnTriggerEnter(this: Script, other: Entity): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Crayta OnTriggerExit Event":{
+		"scope" : "typescript",
+		"prefix" : "on trigger exit",
+		"body": [
+			"/**",
+			"* ### Server Only",
+   			"* Called by a trigger component when",
+			"* an entity exits the trigger volume",
+   			"*/",
+	 		"export function OnTriggerExit(this: Script, other: Entity): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Crayta Init Event":{
+		"scope" : "typescript",
+		"prefix" : "init",
+		"body": [
+	 		"export function${1| , Local, Client|}Init(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Character IronSight Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on character IronSight",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix)  on Character",
+   			"*/",
+	 		"export function${2| Local, |}OnIronSight${1|Start,End|}(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Character Sprint Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on character Sprint",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix)  on Character",
+   			"*/",
+	 		"export function${2| Local, |}OnSprint${1|Start,End|}(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Character Mantle Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on character Mantle",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix)  on Character",
+   			"*/",
+	 		"export function${2| Local, |}OnMantle${1|Start,End|}(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Character Slide Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on character Slide",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix)  on Character",
+   			"*/",
+	 		"export function${2| Local, |}OnSlide${1|Start,End|}(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Character Roll Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on character Roll",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix)  on Character",
+   			"*/",
+	 		"export function${2| Local, |}OnRoll${1|Start,End|}(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Character Crouch Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on character Crouch",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix)  on Character",
+   			"*/",
+	 		"export function${2| Local, |}OnCrouch(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Character Stand Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on character Stand",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix) on Character",
+   			"*/",
+	 		"export function${2| Local, |}OnStand(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Character Jump Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on character Jump",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix) on Character",
+   			"*/",
+	 		"export function${2| Local, |}OnJump(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Button Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on Input Button",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix) on Character and User",
+   			"*/",
+	 		"export function${2| Local, |}OnButton${1|Pressed,Released|}(this: Script, button: Button): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Button Pressed Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on Input Button Pressed",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix) on Character and User",
+   			"*/",
+	 		"export function${2| Local, |}OnButtonPressed(this: Script, button: Button): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Button Released Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on Input Button Released",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix) on Character and User",
+   			"*/",
+	 		"export function${2| Local, |}OnButtonReleased(this: Script, button: Button): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Spawn Effect Ended Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on character Spawn Effect Ended",
+		"body": [
+			"/**",
+			"* ### Server or Local (with prefix) on Character and User",
+   			"*/",
+	 		"export function${2| Local, |}OnSpawnEffectEnded(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Activity Triggered Event - Crayta":{
+		"scope" : "typescript",
+		"prefix" : "on character activity triggered",
+		"body": [
+			"/**",
+			"* Called when an activity is triggered",
+   			"*/",
+	 		"export function${2| Local, |}OnActivityTriggered(this: Script, id:ActionId, category:ActionCategory ): void {\n\t$0\n}",
+	 	],
+	},
+
+
+}

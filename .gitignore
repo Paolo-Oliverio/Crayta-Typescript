@@ -1,0 +1,7 @@
+# Dependency directories
+node_modules/
+Projects/
+!Projects/README.md
+Templates/BasicTemplate/XformPReprocess
+Templates/BasicTemplate/Widgets/html/assets
+package-lock.json

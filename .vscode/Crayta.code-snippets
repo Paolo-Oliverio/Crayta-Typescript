@@ -1,0 +1,113 @@
+{
+	"Crayta Script Component":{
+		"scope" : "typescript",
+		"prefix" : "scriptcomponent",
+		"body": [
+	 		"export let Properties: property.Array",
+	 		"{\n\t//Put script properties here (snippets starting with prop)",
+			"\n\t//Remember to add your properties consts to Properties array",
+			"\tProperties = []",
+			"}",
+			"export function Init(this: Script): void {\n\t$0\n}",
+	 	],
+	},
+
+	"Crayta GetWorld":{
+		"scope" : "typescript",
+		"prefix" : "get world",
+		"body": [
+	 		"const w = GetWorld()\n$0"
+	 	],
+	},
+	"Crayta GetEntity":{
+		"scope" : "typescript",
+		"prefix" : "get entity",
+		"body": [
+	 		"${1|const,let|} ${2:e}: Entity = ${3:this}.GetEntity()\n$0"
+	 	],
+	},
+
+	"Crayta Script Function":{
+		"scope" : "typescript",
+		"prefix" : "func",
+		"body": [
+	 		"export function ${1:name}(${2:this: Script}): ${3:void} {\n\t$0\n}",
+	 	],
+	},
+
+	"Crayta new Vector":{
+		"scope" : "typescript",
+		"prefix" : "new vector",
+		"body": [
+	 		"Vector.New(${1:0},${2:0},${3:0})$0",
+	 	],
+	},
+
+	"Crayta new Vector variable":{
+		"scope" : "typescript",
+		"prefix" : "var new vector",
+		"body": [
+	 		"let ${1:vec} = Vector.New(${2:0},${3:0},${4:0})$0",
+	 	],
+	},
+
+	
+
+	"Crayta new Vector2D":{
+		"scope" : "typescript",
+		"prefix" : ["new v2d","new vector2d"],
+		"body": [
+	 		"Vector2D.New(${1:0},${2:0})$0",
+	 	],
+	},
+
+	"Crayta new Vector2D variable":{
+		"scope" : "typescript",
+		"prefix" : ["var new v2d","var new vector2d"],
+		"body": [
+	 		"let ${1:v2} = Vector2D.New(${2:0},${3:0})$0",
+	 	],
+	},
+
+
+
+	"Crayta NewRotation":{
+		"scope" : "typescript",
+		"prefix" : "new rotation",
+		"body": [
+	 		"Rotation.New(${1:0},${2:0},${3:0})$0",
+	 	],
+	},
+
+	"Crayta NewRotation variable":{
+		"scope" : "typescript",
+		"prefix" : "var new rotation",
+		"body": [
+	 		"let ${1:rot} = Rotation.New(${2:0},${3:0},${4:0})$0",
+	 	],
+	},
+
+	"Crayta New Color":{
+		"scope" : "typescript",
+		"prefix" : "new color",
+		"body": [
+	 		"Color.New(${1:0},${2:0},${3:0},${4:0})$0",
+	 	],
+	},
+
+	"Crayta New Color Variable":{
+		"scope" : "typescript",
+		"prefix" : "var new color",
+		"body": [
+	 		"let ${1:color} = Color.New(${2:0},${3:0},${4:0},${5:0})$0",
+	 	],
+	},
+
+	"Crayta IsA":{
+		"scope" : "typescript",
+		"prefix" : "entity is a",
+		"body": [
+	 		"${1:e}.IsA(${2|Camera,Character,Light,Locator,Mesh,User,VoxelMesh|})$0",
+	 	],
+	},
+}

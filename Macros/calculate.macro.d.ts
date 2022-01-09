@@ -1,0 +1,1 @@
+export default function calculate (value: number): number

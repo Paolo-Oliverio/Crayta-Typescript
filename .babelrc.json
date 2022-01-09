@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    [
+      "babel-plugin-root-import",
+      {
+        "paths": [
+          {
+            "rootPathSuffix": "../../Macros/",
+            "rootPathPrefix": "#/"
+          }
+        ]
+      }
+    ],
+    "@babel/plugin-syntax-typescript",
+    "babel-plugin-macros"
+  ]
+}
