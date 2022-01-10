@@ -55,9 +55,11 @@ type stringSocket =
   | "calf_r"
   | "foot_r"
 
+declare class ScriptedEntity extends Entity {
+  [prop: string]: any //needed as you can get script added to the entity.
+}
 declare class Entity {
   protected constructor()
-  [prop: string]: any //needed as you can get script added to the entity.
   /**
    * Returns true if the parameter passed to it is a valid entity
    */
@@ -291,7 +293,10 @@ declare class Entity {
    * ### Server Only
    * Attach this Entity to a Character entity, using the named socket
    */
-  AttachTo(characterToAttachTo: Character, socketName: stringSocket | Socket): void
+  AttachTo(
+    characterToAttachTo: Character,
+    socketName: stringSocket | Socket
+  ): void
   /**
    * ### Server Only
    * Detach from parent
