@@ -1,15 +1,3 @@
-declare function MACRO<T>(t: T): T
-
-declare interface arrayNumber {
-  [prop: number]: number
-}
-
-declare interface array2dNumber {
-  [prop: number]: arrayNumber
-}
-
-declare type arraynum = number[][]
-
 declare interface _globals {
   [prop: string]: any //needed to add and get from global table
   /**
