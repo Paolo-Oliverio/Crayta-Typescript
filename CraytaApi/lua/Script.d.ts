@@ -1,7 +1,8 @@
 declare interface ScheduleHandle {}
 
 declare interface ScriptStrict {
-  properties: any
+  Properties?: property.Array
+  properties: any | null
   /**
    * Alternative to self.properties, this gets the bag of values produced from the property
    */
@@ -83,6 +84,8 @@ declare interface ScriptStrict {
    *Call eventName on this script on the client that owns the Player or User this script is attached to.
    */
   SendToLocal(eventName: string, ...args: any): void
+
+  Init?(this: Script): void
 }
 
 declare interface Script extends ScriptStrict {
