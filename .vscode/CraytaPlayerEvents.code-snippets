@@ -1,0 +1,195 @@
+{
+  "Crayta OnUserLogin Event": {
+    "scope": "typescript",
+    "prefix": "on login",
+    "body": [
+      "/**",
+      "* ### Server Only",
+      "* Called when a new user joins the game.",
+      "*/",
+      "script.OnLogin = function(user:User): void {\n\t$0\n}"
+    ]
+  },
+
+  "Crayta OnUserLogout Event": {
+    "scope": "typescript",
+    "prefix": "on logout",
+    "body": [
+      "/**",
+      "* ### Server Only",
+      "* Called when a new user leaves the game.",
+      "*/",
+      "script.OnLogout = function(user:User): void {\n\t$0\n}"
+    ]
+  },
+
+  "Crayta OnDeathPlaneTrigger Event": {
+    "scope": "typescript",
+    "prefix": "on deathplane trigger",
+    "body": [
+      "/**",
+      "* ### Server Only",
+      "* Called by the game on a Player when",
+      "* the Player is below the death plane setting",
+      "*/",
+      "script. OnDeathPlaneTrigger = function(): void {\n\t$0\n}"
+    ]
+  },
+
+  "Character IronSight Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on character IronSight",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix)  on Character",
+      "*/",
+      "script.${1|LocalOnIronSight,OnIronSight|}${2|Start,Stop|} = function(): void {\n\t$0\n}"
+    ]
+  },
+
+  "Character Sprint Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on character Sprint",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix)  on Character",
+      "*/",
+      "script.${1|LocalOnSprint,OnSprint|}OnSprint${2|Start,Stop|} = function(): void {\n\t$0\n}"
+    ]
+  },
+
+  "Character Mantle Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on character Mantle",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix)  on Character",
+      "*/",
+      "script.${1|LocalOnMantle,OnMantle|}OnMantle${2|Start,Stop|} = function(): void {\n\t$0\n}"
+    ]
+  },
+
+  "Character Slide Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on character Slide",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix)  on Character",
+      "*/",
+      "script.${1|LocalOnSlide,OnSlide|}${1|Start,Stop|} = function(): void {\n\t$0\n}"
+    ]
+  },
+
+  "Character Roll Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on character Roll",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix)  on Character",
+      "*/",
+      "script.${1|LocalOnRoll,OnRoll|}${1|Start,Stop|} = function(): void {\n\t$0\n}"
+    ]
+  },
+
+  "Character Crouch Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on character Crouch",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix)  on Character",
+      "*/",
+      "script.${1|LocalOnCrouch,OnCrouch|} = function(): void {\n\t$0\n}"
+    ]
+  },
+
+  "Character Stand Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on character Stand",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix) on Character",
+      "*/",
+      "script.${1|LocalOnStand,OnStand|} = function(): void {\n\t$0\n}"
+    ]
+  },
+
+  "Character Jump Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on character Jump",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix) on Character",
+      "*/",
+      "script.${1|LocalOnJump,OnJump|} = function(): void {\n\t$0\n}"
+    ]
+  },
+
+  "Button Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on Input Button",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix) on Character and User",
+      "*/",
+      "script.${1|LocalOnButton,OnButton|}${2|Pressed,Released|} = function( button: Button): void {\n\t$0\n}"
+    ]
+  },
+
+  "Button Pressed Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on input button oressed event",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix) on Character and User",
+      "*/",
+      "script.${1|LocalOnButtonPressed,OnButtonPressed|} = function( button: Button): void {\n\t$0\n}"
+    ]
+  },
+
+  "Button Released Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on input button released event",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix) on Character and User",
+      "*/",
+      "script.${1|LocalOnButtonReleased,OnButtonReleased|} = function( button: Button): void {\n\t$0\n}"
+    ]
+  },
+
+  "Spawn Effect Ended Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on character spawn effect ended event",
+    "body": [
+      "/**",
+      "* ### Server or Local (with prefix) on Character and User",
+      "*/",
+      "script.${1|LocalOnSpawnEffectEnded,OnSpawnEffectEnded|} = function(): void {\n\t$0\n}"
+    ]
+  },
+
+  "Activity Triggered Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on character activity triggered event",
+    "body": [
+      "/**",
+      "* Called when an activity is triggered",
+      "*/",
+      "script.OnActivityTriggered = function(id: string, display: Text, category: string ): void {\n\t$0\n}"
+    ]
+  },
+
+  "Hotbar Changed Event - Crayta": {
+    "scope": "typescript",
+    "prefix": "on hotbar changed event",
+    "body": [
+      "/**",
+	  "* ### Server Only",
+      "* Called on server when the user's hotbar index changes, either by using the previous and next buttons or using the hotbar keys on a keyboard",
+	  "*",
+	  "* Calls function on all user and player scripts.",
+      "*/",
+      "script.OnHotbarChanged = function(hotbarIndex: number): void {\n\t$0\n}"
+    ]
+  }
+}

@@ -35,13 +35,8 @@
       "type": "shell",
 	  "command" : "npx tsc -p Scripts/tsconfig.json",
       //"problemMatcher": [],
-      "label": "Tsc check Script Errors"
-    },
-	{
-      "type": "shell",
-	  "command" : "npx tsc -p Widgets/tsconfig.json",
-      //"problemMatcher": [],
-      "label": "Tsc check Script Errors"
+      "label": "Tsc check Script Errors",
+	  "group": "test",
     },
 	{
         "label": "Lua Workflow Watch",

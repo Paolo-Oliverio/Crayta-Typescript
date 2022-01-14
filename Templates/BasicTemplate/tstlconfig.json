@@ -5,6 +5,8 @@
 	"module":"Commonjs",
     "moduleResolution": "node",
     "allowJs": true,
+	"declaration": true,
+	"declarationDir" : "OUT/Types",
     "noEmit": false,
     "strict": false,
     "esModuleInterop": true,
@@ -18,5 +20,5 @@
     "luaLibImport": "inline",
     "luaPlugins": [{ "name": "../../Plugins/LuaArrayIndexing.ts" }]
   },
-  "include": ["./XformPreprocess", "./Scripts/Types", "../../CraytaApi/lua"]
+  "include": ["./XformPreprocess", "./Scripts/Types", "./OUT/Types", "../../CraytaApi/lua"]
 }

@@ -19,6 +19,7 @@
     "lib": ["ES5", "DOM"]
   },
   "include": [
+	"./OUT/Types",
     "./Scripts/Types",
 	"./XformPreprocess",
     "../../Gulp",
