@@ -1,11 +1,11 @@
 {
 	"Property Create - Crayta":{
 		"scope" : "typescript",
-		"prefix" : "new property",
+		"prefix" : "new script property",
 		"body": [
 	 		"const ${1:Name}: property.${2|Number,String,Text,Boolean,Vector,Vector2D,Rotation,Entity,Color,Event,Asset|} = {",
 			"\tname: '${1:Name}',",
-			"\ttype: property.type.${2},",
+			"\ttype: \"${2}\",",
 			"\t$0",
   			"}\n"
 	 	],
@@ -13,7 +13,7 @@
 
 	"Property Number Create - Crayta":{
 		"scope" : "typescript",
-		"prefix" : "new property number",
+		"prefix" : "new script property number",
 		"body": [
 	 		"const ${1:Name}: property.Number = {",
 			"\tname: '${1:Name}',",
