@@ -1,4 +1,4 @@
-declare interface ScheduleHandle {}
+type ScheduleHandle = undefined | null
 
 declare interface ScriptEvents {
   /**
@@ -52,8 +52,8 @@ declare interface PlayerEvents {
   /**
    * ### Server Only
    * Called on server when the user's hotbar index changes, either by using the previous and next buttons
-   * or using the hotbar keys on a keyboard. 
-   * 
+   * or using the hotbar keys on a keyboard.
+   *
    * Calls function on all user and player scripts.
    */
   OnHotbarChanged(hotbarIndex: number): void
@@ -66,12 +66,12 @@ declare interface PlayerEvents {
    * ### Server Only
    * Called when a new user joins the game.
    */
-  OnLogin(user: User): void
+  OnUserLogin(user: User): void
   /**
    * ### Server Only
    * Called when a new user leaves the game.
    */
-  OnLogout(user: User): void
+  OnUserLogout(user: User): void
   /**
    * ### Local Only
    * Called to initialize a script on the client that controls this entity (eg player, user, etc...)
@@ -143,11 +143,11 @@ declare interface PlayerEvents {
   /**
    * ### Server on Character and User
    */
-  OnButtonPressed(): void
+  OnButtonPressed(button: stringButton): void
   /**
    * ### Server on Character and User
    */
-  OnButtonReleased(): void
+  OnButtonReleased(button: stringButton): void
   /**
    * ### Server on Character and User
    */
@@ -311,7 +311,7 @@ declare interface LocalScriptStrict extends ScriptStrict, Partial<PlayerEvents> 
    * ### Server Only
    * Get the save data previously written out with SetSaveData on this script. This function returns the save data immediately.
    */
-  GetSaveData(): any
+  GetSaveData(savedata:(data:any)=>void): any
   /**
    * ### Server Only
    *Call eventName on this script on the client that owns the Player or User this script is attached to.
@@ -332,5 +332,47 @@ declare interface LocalScriptStrict extends ScriptStrict, Partial<PlayerEvents> 
  * There is also a strictly Typed LocalScriptStrict version
  * */
 declare interface LocalScript extends LocalScriptStrict {
+  [prop: string]: any
+}
+
+/**
+ * Scripts made for Player and User 
+ * */
+declare interface CharacterScriptStrict extends LocalScriptStrict {
+  /**
+   * Returns the User or Character Entity that the script is attached to.
+   */
+  GetEntity(): Character
+}
+
+/**
+ * Scripts made for Player and User 
+ * 
+ * doesn't require strinct typing and previous declaration
+ * 
+ * There is also a strictly Typed LocalScriptStrict version
+ * */
+declare interface CharacterScript extends CharacterScriptStrict {
+  [prop: string]: any
+}
+
+/**
+ * Scripts made for Player and User 
+ * */
+declare interface UserScriptStrict extends LocalScriptStrict {
+  /**
+   * Returns the User or Character Entity that the script is attached to.
+   */
+  GetEntity(): User
+}
+
+/**
+ * Scripts made for Player and User 
+ * 
+ * doesn't require strinct typing and previous declaration
+ * 
+ * There is also a strictly Typed LocalScriptStrict version
+ * */
+declare interface UserScript extends UserScriptStrict {
   [prop: string]: any
 }

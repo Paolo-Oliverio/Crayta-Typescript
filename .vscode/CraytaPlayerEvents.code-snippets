@@ -7,7 +7,7 @@
       "* ### Server Only",
       "* Called when a new user joins the game.",
       "*/",
-      "script.OnLogin = function(user:User): void {\n\t$0\n}"
+      "script.OnUserLogin = function(user:User): void {\n\t$0\n}"
     ]
   },
 
@@ -19,7 +19,7 @@
       "* ### Server Only",
       "* Called when a new user leaves the game.",
       "*/",
-      "script.OnLogout = function(user:User): void {\n\t$0\n}"
+      "script.OnUserLogout = function(user:User): void {\n\t$0\n}"
     ]
   },
 
@@ -54,7 +54,7 @@
       "/**",
       "* ### Server or Local (with prefix)  on Character",
       "*/",
-      "script.${1|LocalOnSprint,OnSprint|}OnSprint${2|Start,Stop|} = function(): void {\n\t$0\n}"
+      "script.${1|LocalOnSprint,OnSprint|}${2|Start,Stop|} = function(): void {\n\t$0\n}"
     ]
   },
 
@@ -65,7 +65,7 @@
       "/**",
       "* ### Server or Local (with prefix)  on Character",
       "*/",
-      "script.${1|LocalOnMantle,OnMantle|}OnMantle${2|Start,Stop|} = function(): void {\n\t$0\n}"
+      "script.${1|LocalOnMantle,OnMantle|}${2|Start,Stop|} = function(): void {\n\t$0\n}"
     ]
   },
 
@@ -76,7 +76,7 @@
       "/**",
       "* ### Server or Local (with prefix)  on Character",
       "*/",
-      "script.${1|LocalOnSlide,OnSlide|}${1|Start,Stop|} = function(): void {\n\t$0\n}"
+      "script.${1|LocalOnSlide,OnSlide|}${2|Start,Stop|} = function(): void {\n\t$0\n}"
     ]
   },
 
@@ -87,7 +87,7 @@
       "/**",
       "* ### Server or Local (with prefix)  on Character",
       "*/",
-      "script.${1|LocalOnRoll,OnRoll|}${1|Start,Stop|} = function(): void {\n\t$0\n}"
+      "script.${1|LocalOnRoll,OnRoll|}${2|Start,Stop|} = function(): void {\n\t$0\n}"
     ]
   },
 
@@ -131,7 +131,7 @@
       "/**",
       "* ### Server or Local (with prefix) on Character and User",
       "*/",
-      "script.${1|LocalOnButton,OnButton|}${2|Pressed,Released|} = function( button: Button): void {\n\t$0\n}"
+      "script.${1|LocalOnButton,OnButton|}${2|Pressed,Released|} = function( button: stringButton): void {\n\t$0\n}"
     ]
   },
 
@@ -142,7 +142,7 @@
       "/**",
       "* ### Server or Local (with prefix) on Character and User",
       "*/",
-      "script.${1|LocalOnButtonPressed,OnButtonPressed|} = function( button: Button): void {\n\t$0\n}"
+      "script.${1|LocalOnButtonPressed,OnButtonPressed|} = function( button: stringButton): void {\n\t$0\n}"
     ]
   },
 
@@ -153,7 +153,7 @@
       "/**",
       "* ### Server or Local (with prefix) on Character and User",
       "*/",
-      "script.${1|LocalOnButtonReleased,OnButtonReleased|} = function( button: Button): void {\n\t$0\n}"
+      "script.${1|LocalOnButtonReleased,OnButtonReleased|} = function( button: stringButton): void {\n\t$0\n}"
     ]
   },
 
