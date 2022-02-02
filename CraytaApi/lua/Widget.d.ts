@@ -1,3 +1,9 @@
+
+declare interface Js {
+  [prop: string]: any
+  CallFunction(functionName: string, ...args: any)
+}
+
 declare interface Widget {
   [prop: string]: any
   Show(): void
