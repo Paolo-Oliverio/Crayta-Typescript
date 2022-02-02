@@ -7,7 +7,7 @@ import rename = require("gulp-rename")
 
 const _lua = (cb: any, settingsLua:any) => {
   gulp
-    .src("Scripts/Src/**/*.ts")
+    .src(settingsLua.path || "Scripts/Src/**/*.ts")
     .pipe(plumber())
     .on("error", errorHnd)
     .pipe(preprocess(settingsLua))
