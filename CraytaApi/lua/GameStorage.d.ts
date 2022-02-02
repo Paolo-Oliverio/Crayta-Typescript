@@ -26,6 +26,7 @@ declare namespace GameStorage {
    * Global counters are always whole (integer) numbers.
    */
   function UpdateCounter(
+	  this:void,
     counterName: string,
     increment: number,
     callback: storageCallback
@@ -38,5 +39,5 @@ declare namespace GameStorage {
    *
    * Global counters are always whole (integer) numbers.
    */
-  function UpdateCounter(counterName: string, increment: number): void
+  function UpdateCounter(this: void, counterName: string, increment: number): void
 }
