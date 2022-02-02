@@ -2,18 +2,20 @@ declare namespace property {
   type Array = (Boolean|Number|String|Text|Vector|Vector2D|Rotation|Asset|Entity|Event|Color)[]
 
 const enum Type {
-    Number = "number",
-    String = "string",
-    Text = "text",
-    Boolean = "boolean",
-    Vector = "vector",
-    Vector2d = "vector2d",
-    Rotation = "rotation",
-    Entity = "entity",
-    Color = "color",
-    Event = "event",
-    Asset = "asset",
-  }
+  Number = "number",
+  String = "string",
+  Text = "text",
+  Boolean = "boolean",
+  Vector = "vector",
+  Vector2d = "vector2d",
+  Rotation = "rotation",
+  Entity = "entity",
+  Color = "color",
+  Event = "event",
+  Asset = "asset",
+  CameraShake = "camerashakeasset",
+  Template = "template"
+}
 
   /**
    * All available types
@@ -30,6 +32,25 @@ const enum Type {
     | "color"
     | "event"
     | "asset"
+    | "camerashakeasset"
+    | "template"
+    | "templateasset"
+    | "voxelasset"
+    | "meshasset"
+    | "soundasset"
+    | "worldasset"
+    | "effectasset"
+    | "scriptasset"
+    | "widgetasset"
+    | "skydomeasset"
+    | "innerhorizonasset"
+    | "outerhorizonasset"
+    | "gripasset"
+    | "colorgradingasset"
+    | "postprocessasset"
+    | "skymeshasset"
+    | "skylayerasset"
+    | "voxelmeshasset"
   /**
    * string (default:nil)
    *
