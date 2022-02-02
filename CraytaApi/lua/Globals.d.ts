@@ -59,6 +59,14 @@ declare interface _globals {
    * @noSelf
    */
   setmetatable(destination: LuaTable, origin: LuaTable): void
+  /**
+   *
+   */
+  tostring(arg: any): string
+  /**
+   *
+   */
+  Format(format: string, ...varArg: any): Text
 }
 
 declare let _G : _globals
@@ -86,15 +94,15 @@ declare function Print(this: void, ...args: any): void
 /**
  * Todo Doc
  */
-declare function printf(format: string, ...args: any): void
+declare function printf(this: void,format: string, ...args: any): void
 /**
  * Todo Doc
  */
-declare function Printf(format: string, ...args: any): void
+declare function Printf(this: void, format: string, ...args: any): void
 /**
  * Todo Doc
  */
-declare function FormatString(format: string, ...args: any): void
+declare function FormatString(this: void, format: string, ...args: any): void
 /**
  * Todo Doc
  */
@@ -111,4 +119,11 @@ declare function IsServer(): boolean
  * @noSelf
  */
 declare function setmetatable(destination: any, origin: any): void
-
+/**
+ * @noSelf
+ */
+declare function tostring(arg: any): string
+/**
+*@noSelf
+*/
+declare function Format(format: string|Text, ...varArg: any): Text
