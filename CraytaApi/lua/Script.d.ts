@@ -224,7 +224,7 @@ declare interface PlayerEvents {
    * ### Client Only
    * Called when a quick chat message is triggered by a user
    */
-  OnChatMessage(user: User, message: Text)
+  OnChatMessage(user: User, message: Text):void
 }
 declare interface ScriptStrict extends Partial<ScriptEvents> {
   Properties: property.Array
@@ -258,7 +258,7 @@ declare interface ScriptStrict extends Partial<ScriptEvents> {
    *
    * functionName will be called on the listenerScriptComponent script.
    */
-  ListenForEvent(eventName: string, listenerScriptComponent: Script, functionName: string)
+  ListenForEvent(eventName: string, listenerScriptComponent: Script, functionName: string):void
   /**
    * Call eventName on any scripts that have registered for it using ListenForEvent with the given args.
    *

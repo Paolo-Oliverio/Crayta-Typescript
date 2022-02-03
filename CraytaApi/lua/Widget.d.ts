@@ -1,7 +1,7 @@
 
 declare interface Js {
   [prop: string]: any
-  CallFunction(functionName: string, ...args: any)
+  CallFunction(functionName: string, ...args: any):void
 }
 
 declare interface Widget {

@@ -105,11 +105,7 @@ declare class Entity {
   /**
    * Rotate from fromRotation to toRotation over time.
    */
-  AlterRotation(
-    fromRotation: Rotation,
-    toRotation: Rotation,
-    time: number
-  ): number
+  AlterRotation(fromRotation: Rotation, toRotation: Rotation, time: number): number
   /**
    * Get the rotation of this Entity.
    */
@@ -125,11 +121,7 @@ declare class Entity {
   /**
    * Move from fromPosition to toPosition over time relative to whatever this entity is parented to.
    */
-  AlterRelativePosition(
-    fromPosition: Vector,
-    toPosition: Vector,
-    time: number
-  ): number
+  AlterRelativePosition(fromPosition: Vector, toPosition: Vector, time: number): number
   /**
    * Get the position of this Entity relative to whatever this entity is parented to.
    */
@@ -145,11 +137,7 @@ declare class Entity {
   /**
    * Rotate from fromRotation to toRotation over time relative to whatever this entity is parented to.
    */
-  AlterRelativeRotation(
-    fromRotation: Rotation,
-    toRotation: Rotation,
-    time: number
-  ): number
+  AlterRelativeRotation(fromRotation: Rotation, toRotation: Rotation, time: number): number
   /**
    * Get the rotation of this Entity relative to whatever this entity is parented to.
    */
@@ -219,11 +207,7 @@ declare class Entity {
    *
    * Fades in over the given fadeIn time.
    */
-  PlaySoundAtLocation(
-    location: Vector,
-    sound: SoundAsset,
-    fadeIn: number
-  ): SoundHandle
+  PlaySoundAtLocation(location: Vector, sound: SoundAsset, fadeIn: number): SoundHandle
   /**
    * Play a sound Asset on this Entity at the given location.
    *
@@ -231,12 +215,7 @@ declare class Entity {
    *
    * Fades out any sound already playing in the GroupName with the given fadeIn time.
    */
-  PlaySoundAtLocation(
-    location: Vector,
-    sound: SoundAsset,
-    fadeIn: number,
-    groupName: string
-  ): SoundHandle
+  PlaySoundAtLocation(location: Vector, sound: SoundAsset, fadeIn: number, groupName: string): SoundHandle
   /**
    * Given a sound Handle stop the sound on this Entity.
    */
@@ -260,21 +239,12 @@ declare class Entity {
   /**
    * Play a particle effect Asset at a given world location and rotation, returning a Handle which can be used to stop the effect.
    */
-  PlayEffectAtLocation(
-    location: Vector,
-    rotation: Rotation,
-    effect: EffectAsset
-  ): EffectHandle
+  PlayEffectAtLocation(location: Vector, rotation: Rotation, effect: EffectAsset): EffectHandle
   /**
    * Play a particle effect Asset at a given world location and rotation, returning a Handle which can be used to stop the effect.
    * Optionally the effect is attached to the entity and so all spawned particles are relative to it.
    */
-  PlayEffectAtLocation(
-    location: Vector,
-    rotation: Rotation,
-    effect: EffectAsset,
-    attached: boolean
-  ): EffectHandle
+  PlayEffectAtLocation(location: Vector, rotation: Rotation, effect: EffectAsset, attached: boolean): EffectHandle
   /**
    * TODO Documentation
    */
@@ -293,10 +263,7 @@ declare class Entity {
    * ### Server Only
    * Attach this Entity to a Character entity, using the named socket
    */
-  AttachTo(
-    characterToAttachTo: Character,
-    socketName: stringSocket | Socket
-  ): void
+  AttachTo(characterToAttachTo: Character, socketName: stringSocket | Socket): void
   /**
    * ### Server Only
    * Detach from parent
@@ -305,12 +272,7 @@ declare class Entity {
   /**
    * Apply damageAmount damage to the Entity (by calling OnDamage on it on any scripts that override that), also pass a HitResult from a World Raycast function and a shootDirection Vector and fromEntity which will be passed to the OnDamage function.
    */
-  ApplyDamage(
-    damageAmount: number,
-    hitResult: HitResult,
-    shootDirection: Vector,
-    fromEntity: Entity
-  ): void
+  ApplyDamage(damageAmount: number, hitResult: HitResult, shootDirection: Vector, fromEntity: Entity): void
   /**
    * Apply damageAmount damage to the Entity (by calling OnDamage on it on any scripts that override that), also pass a HitResult from a World Raycast function and a shootDirection Vector and fromEntity which will be passed to the OnDamage function.
    *
@@ -326,22 +288,13 @@ declare class Entity {
   /**
    * Apply damageAmount damage to the Entity (by calling OnDamage on it on any scripts that override that), also pass a shootDirection Vector and fromEntity which will be passed to the OnDamage function.
    */
-  ApplyDamage(
-    damageAmount: number,
-    shootDirection: Vector,
-    fromEntity: Entity
-  ): void
+  ApplyDamage(damageAmount: number, shootDirection: Vector, fromEntity: Entity): void
   /**
    * Apply damageAmount damage to the Entity (by calling OnDamage on it on any scripts that override that), also pass a shootDirection Vector and fromEntity which will be passed to the OnDamage function.
    *
    * DamageModifiers is a table of { voxel = <voxelasset>, damageMultiplier = <number> } tables, and/or scripts that have voxel and damageMultiplier properties: { name = "voxel", type = "voxelasset" } and { name = "damageMultiplier", type = "number" }.
    */
-  ApplyDamage(
-    damageAmount: number,
-    shootDirection: Vector,
-    fromEntity: Entity,
-    damageModifiers: damageModifiers
-  ): void
+  ApplyDamage(damageAmount: number, shootDirection: Vector, fromEntity: Entity, damageModifiers: damageModifiers): void
   /**
    * Get a parent Entity that this Entity is attached to either within the world tree or using the Attach function.
    */
@@ -383,13 +336,13 @@ declare class Entity {
   /**
    * This is alternative to entity.scriptName which is the preferred way of getting a script.
    */
-  FindScript(scriptName): Script
+  FindScript(scriptName: string): Script
   /**
    * This is alternative to entity.scriptName which is the preferred way of getting a script.
    *
    * This can be recursive to find the script on any child entities.
    */
-  FindScript(scriptName, recursive: boolean): Script
+  FindScript(scriptName: string, recursive: boolean): Script
   /**
    * Find a script by its script asset.
    */

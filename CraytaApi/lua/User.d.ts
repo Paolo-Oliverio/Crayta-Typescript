@@ -58,7 +58,7 @@ declare class User extends Entity {
    * ### Server Only
    * Spawn a player Entity for this User using the supplied template asset and trigger the spawn effect with callback
    */
-  SpawnPlayerWithEffect(playerTemplate): Character
+  SpawnPlayerWithEffect(playerTemplate:Template): Character
   /**
    * ### Server Only
    * Spawn a player Entity for this User using the supplied template asset,	at the position of the spawnPoint (which can be any Entity with a 'playerstart' component) and trigger the spawn effect.

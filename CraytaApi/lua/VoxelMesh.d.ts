@@ -41,7 +41,7 @@ declare class VoxelMesh extends Entity {
   /**
    * Destroy a thruster
    */
-  DestroyThruster(Thruster): void
+  DestroyThruster(Thruster:Thruster): void
   /**
    * Add Impulse. An integral of force over a time interval. Newton seconds.
    */

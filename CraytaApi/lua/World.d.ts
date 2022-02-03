@@ -230,7 +230,7 @@ declare interface World {
     outerRadius: number,
     falloff: number,
     orientToDirection: boolean
-  )
+  ):void
   PlayCameraShakeEffectAtLocation(
     cameraShake: CameraShakeAsset,
     location: Vector,
@@ -238,7 +238,7 @@ declare interface World {
     outerRadius: number,
     falloff: number,
     orientToDirection: boolean
-  )
+  ):void
   GetWorldAsset(): WorldAsset
 
   startTime: number

@@ -14,7 +14,7 @@ declare namespace Leaderboards {
     numValues: number,
     user: User,
     leaderboardCallback: leaderboardCallback
-  )
+  ): void
   /**
    *Gets the top ranking values from the specified leaderboard.
 	*
@@ -25,19 +25,15 @@ declare namespace Leaderboards {
     leaderboardId: string,
     numValues: number,
     leaderboardCallback: leaderboardCallback
-  )
+  ): void
   /**
    *
    */
-  function GetMetadata(
-    this: void,
-    leaderboardId: string,
-    leaderboardCallback: leaderboardCallback
-  )
+  function GetMetadata(this: void, leaderboardId: string, leaderboardCallback: leaderboardCallback): void
   /**
    *
    */
-  function GetAllMetadata(this: void, leaderboardCallback: leaderboardCallback)
+  function GetAllMetadata(this: void, leaderboardCallback: leaderboardCallback): void
   /**
    *
    */
@@ -48,7 +44,7 @@ declare namespace Leaderboards {
     numValues: number,
     user: User,
     leaderboardCallback: leaderboardCallback
-  )
+  ): void
   /**
    *
    */
@@ -58,7 +54,7 @@ declare namespace Leaderboards {
     leaderboardId: string,
     numValues: number,
     leaderboardCallback: leaderboardCallback
-  )
+  ): void
   /**
    *
    */
@@ -67,7 +63,7 @@ declare namespace Leaderboards {
     gameId: string,
     leaderboardId: string,
     leaderboardCallback: leaderboardCallback
-  )
+  ): void
   /**
    *
    */
@@ -75,5 +71,5 @@ declare namespace Leaderboards {
     this: void,
     gameId: string,
     leaderboardCallback: leaderboardCallback
-  )
+  ):void
 }
