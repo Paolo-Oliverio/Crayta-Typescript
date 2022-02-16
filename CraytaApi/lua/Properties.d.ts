@@ -51,6 +51,7 @@ const enum Type {
     | "skymeshasset"
     | "skylayerasset"
     | "voxelmeshasset"
+    | "vibrationeffectasset"
   /**
    * string (default:nil)
    *
@@ -147,7 +148,7 @@ const enum Type {
      *
      * For example, you might hide an “clipSize” property on a gun if it has a boolean “infiniteAmmo” property set to true: visibleIf = (p)=>{return not p.infiniteAmmo}
      */
-    visibleIf?: property.isVisible
+    visibleIf?: (this:void, p: any) => boolean
     /**
      * Includes this property in a collapsible group of the given name in the editor.
      *
@@ -309,9 +310,5 @@ const enum Type {
   interface Asset extends Basic {
 	  
     is?: stringAssetType
-  }
-
-  interface isVisible {
-    (property: any[]): boolean
   }
 }
