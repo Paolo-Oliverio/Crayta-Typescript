@@ -1,3 +1,4 @@
+/*@noSelfInFile*/
 declare interface _globals {
   [prop: string]: any //needed to add and get from global table
   /**
@@ -44,7 +45,7 @@ declare interface _globals {
    * Todo Doc
    * @noSelf
    */
-  GetWorld(): World
+  GetWorld(this: void): World
   /**
    * Return true if this script is running on the client
    * @noSelf
@@ -60,11 +61,11 @@ declare interface _globals {
    */
   setmetatable(destination: LuaTable, origin: LuaTable): void
   /**
-   *
+   * @noSelf
    */
   tostring(arg: any): string
   /**
-   *
+   * @noSelf
    */
   Format(format: string, ...varArg: any): Text
 }
@@ -73,46 +74,56 @@ declare let _G : _globals
 
 /**
  * Return true if called within a Schedule coroutine
+ * @noSelf
  */
-declare function IsInSchedule(this: void): boolean
+declare function IsInSchedule(): boolean
 /**
- * Wait for at least given time interval in seconds then resume execution, and return the exact time taken (which will be the next frame after time seconds). Only valid within a Schedule function
+ * Wait for at least given time interval in seconds then resume execution, and return the exact time taken (which will be the next frame after time seconds). 
+ * Only valid within a Schedule function
+ * @noSelf
  */
-declare function Wait(this: void, time: number): number
+declare function Wait(time: number): number
 /**
  * Wait a single frame then resume execution, and return the time taken. Only valid within a Schedule function.
+ * @noSelf
  */
-declare function Wait(this: void): number
+declare function Wait(): number
 /**
  * Standard print function (same as Print), takes a comma separated list of arguments and prints out their string representation.
+ * @noSelf
  */
-declare function print(this: void, ...args: any): void
+declare function print(...args: any): void
 /**
  * Standard print function (same as print), takes a comma separated list of arguments and prints out their string representation.
+ * @noSelf
  */
-declare function Print(this: void, ...args: any): void
+declare function Print(...args: any): void
 /**
  * Todo Doc
+ * @noSelf
  */
-declare function printf(this: void,format: string, ...args: any): void
+declare function printf(format: string, ...args: any): void
 /**
  * Todo Doc
+ * @noSelf
  */
-declare function Printf(this: void, format: string, ...args: any): void
+declare function Printf(format: string, ...args: any): void
 /**
- * Todo Doc
+ * @noSelf
  */
-declare function FormatString(this: void, format: string, ...args: any): void
+declare function FormatString(format: string, ...args: any): void
 /**
- * Todo Doc
+ * @noSelf
  */
 declare function GetWorld(): World
 /**
  * Return true if this script is running on the client
+ * @noSelf
  */
 declare function IsClient(): boolean
 /**
  * Return true if this script is running on the server
+ * @noSelf
  */
 declare function IsServer(): boolean
 /**
@@ -127,3 +138,16 @@ declare function tostring(arg: any): string
 *@noSelf
 */
 declare function Format(format: string|Text, ...varArg: any): Text
+
+declare namespace table{
+  function insert(this:void, table: LuaTable|any[], value: any): number
+  function remove(this:void, table: LuaTable|any[], index: number | string): any
+  function sort(this: void, table: LuaTable | any[], func:(a:any, b:any)=>boolean): void
+}
+/**
+ * Adds Comments to lua output
+ * multiple string arguments transpile to multiline comments.
+ */
+declare namespace lua{
+  function comment(this:void, ...args : string[]):void
+}
