@@ -5,20 +5,24 @@
 	"module":"Commonjs",
     "moduleResolution": "node",
     "allowJs": true,
-	"declaration": true,
-	"declarationDir" : "OUT/Types",
+    "experimentalDecorators": true,
+    "declaration": true,
+    "declarationDir": "OUT/Types",
     "noEmit": false,
-    "strict": false,
+    "strict": true,
     "esModuleInterop": true,
-	"removeComments": false,
-    "types": ["typescript-to-lua/language-extensions"],
+    "removeComments": false,
+    "types": ["node", "typescript-to-lua/language-extensions"],
     "lib": ["esnext"]
   },
   "tstl": {
     "luaTarget": "JIT",
     "noHeader": true,
     "luaLibImport": "inline",
-    "luaPlugins": [{ "name": "../../Plugins/LuaArrayIndexing.ts" }]
+    "luaPlugins": [
+      { "name": "../../Plugins/LuaArrayIndexing.ts" },
+       { "name": "../../Plugins/CraytaPrinter.ts" }      
+      ]
   },
   "include": ["./XformPreprocess", "./Scripts/Types", "./OUT/Types", "../../CraytaApi/lua"]
 }

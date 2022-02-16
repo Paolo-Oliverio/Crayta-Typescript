@@ -1,7 +1,7 @@
 {
   "version": "2.0.0",
   "tasks": [
-	{
+    {
       "type": "gulp",
       "task": "embed",
       "problemMatcher": [],
@@ -13,40 +13,35 @@
       "problemMatcher": [],
       "label": "Lua Prepass Watch"
     },
-	{
+    {
       "type": "gulp",
       "task": "UiWatch",
       "problemMatcher": [],
       "label": "Ui Watch"
     },
-	{
+    {
       "type": "shell",
-	  "command" : "npx  tstl -p tstlconfig.json --watch",
-      //"problemMatcher": [],
-      "label": "Lua Transpilation Watch"
+      "command": "npx  tstl -p tstlconfig.json --watch",
+      "label": "Lua Transpilation Watch",
+      "problemMatcher": []
     },
-	{
+    {
       "type": "shell",
-	  "command" : "npx  tstl -p tstlconfig.json",
-      //"problemMatcher": [],
+      "command": "npx  tstl -p tstlconfig.json",
       "label": "Lua Build"
     },
-	{
+    {
       "type": "shell",
-	  "command" : "npx tsc -p Scripts/tsconfig.json",
-      //"problemMatcher": [],
+      "command": "npx tsc -p Scripts/tsconfig.json",
       "label": "Tsc check Script Errors",
-	  "group": "test",
+      "group": "test"
     },
-	{
-        "label": "Lua Workflow Watch",
-        "dependsOn": [
-            "Lua Prepass Watch",
-            "Lua Transpilation Watch"
-        ],
-        "dependsOrder": "parallel",
-        "group": "build",
-        "isBackground": true
-	}
+    {
+      "label": "Lua Workflow Watch",
+      "dependsOn": ["Lua Prepass Watch", "Lua Transpilation Watch"],
+      "dependsOrder": "parallel",
+      "group": "build",
+      "isBackground": true
+    }
   ]
 }
