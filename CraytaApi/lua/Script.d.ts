@@ -270,7 +270,7 @@ declare interface ScriptStrict extends Partial<ScriptEvents> {
    *
    * Returns a Handle which can be passed to Cancel
    */
-  Schedule(func: noargCallback): ScheduleHandle
+  Schedule(func: (this:void)=>void): ScheduleHandle
   /**
    *Cancel a scheduled task if its running.
    */
@@ -311,7 +311,7 @@ declare interface LocalScriptStrict extends ScriptStrict, Partial<PlayerEvents> 
    * ### Server Only
    * Get the save data previously written out with SetSaveData on this script. This function returns the save data immediately.
    */
-  GetSaveData(savedata:(data:any)=>void): any
+  GetSaveData(): any
   /**
    * ### Server Only
    *Call eventName on this script on the client that owns the Player or User this script is attached to.
