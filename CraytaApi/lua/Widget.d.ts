@@ -9,7 +9,7 @@ declare interface Widget {
   Show(): void
   Hide(): void
   CallFunction(functionName: string, ...args: any):void
-  js: Object
+  js: Js
   visible: boolean
 }
 
