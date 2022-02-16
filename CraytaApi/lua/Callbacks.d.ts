@@ -1,39 +1,14 @@
-declare interface spawnCallback {
-  (): void
-}
-
-declare interface travelFailedCallback {
-  (): void
-}
-
-declare interface storageCallback {
-  (value: number): void
-}
-
-declare interface noargCallback{
-	():void
-}
-
-declare interface varargCallback {
-  (...args: any[]): void
-}
-
-declare interface collisionCallback {
-  (entity: Entity, hitResult: HitResult): void
-}
-
-declare interface userCallback {
-  (user: User, ...args: any[]): void
-}
-
-declare interface leaderboardResult extends Object {
+declare type spawnCallback = (this:void) => void
+declare type travelFailedCallback = (this:void) => void
+declare type storageCallback = (this:void,value: number) => void
+declare type varargCallback = (this:void,...args: any[]) =>  void
+declare type collisionCallback = (this:void,entity: Entity, hitResult: HitResult) => void
+declare type userCallback = (this:void, user: User, ...args: any[]) => void
+declare type leaderboardResult = {
   name: string
   score: number
   rank: number
   icon: string
 }
 type leaderboardResults = leaderboardResult[]
-
-declare interface leaderboardCallback {
-  (leaderboardResults: leaderboardResults):void
-}
+declare type leaderboardCallback = (this:void, leaderboardResults: leaderboardResults) => void
