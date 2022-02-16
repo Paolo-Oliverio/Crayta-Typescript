@@ -3,8 +3,8 @@ declare interface EventBinding {
   function: string
 }
 
-declare interface Event {
-  Send(...varArgs: any[]): void
+declare interface Event<T = (...varArgs: any[])=>void> {
+  Send:T
   Listen(listenerScriptComponent: Script, functionName: string): void
   /**
    * Return true if this Event is bound to anything, even if its something like "every instance of a script" which
