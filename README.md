@@ -1,4 +1,6 @@
 # Crayta typescript 
+introduction video https://www.youtube.com/watch?v=14X6oqyJx3A
+show a simple macro at work and typing for official packages https://www.youtube.com/watch?v=FrByJl2w_6s
 
 ## Features
 * Fully typed and documented api
